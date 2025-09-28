@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/smart-fix/static/css/main.78d31e33.css",
-    "main.js": "/smart-fix/static/js/main.a76a9fcb.js",
+    "main.js": "/smart-fix/static/js/main.f9799b18.js",
+    "static/media/logo1.png": "/smart-fix/static/media/logo1.b4b22ca37b3d998105ff.png",
     "index.html": "/smart-fix/index.html",
     "main.78d31e33.css.map": "/smart-fix/static/css/main.78d31e33.css.map",
-    "main.a76a9fcb.js.map": "/smart-fix/static/js/main.a76a9fcb.js.map"
+    "main.f9799b18.js.map": "/smart-fix/static/js/main.f9799b18.js.map"
   },
   "entrypoints": [
     "static/css/main.78d31e33.css",
-    "static/js/main.a76a9fcb.js"
+    "static/js/main.f9799b18.js"
   ]
 }
