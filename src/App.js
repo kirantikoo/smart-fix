@@ -1,8 +1,11 @@
 import React, { useState} from "react";
 import HeroSlider from "./components/HeroSlider";
+import ProductsSection from "./components/ProductsSection";
+
 import "./App.css";
 
 function App() {
+  
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="App">
@@ -41,7 +44,12 @@ function App() {
                 <a href="#products" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">Products</a>
                 <a href="#services" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">Services</a>
                 <a href="#testimonials" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">Testimonials</a>
-                <a href="mailto:smartfixcs2018@gmail.com?subject=Quote Request&body=Hello, I would like to get a quote for your services." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-8 py-3 rounded-full font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105 inline-block">
+                <a
+                  href="https://wa.me/918710031865?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20services."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-8 py-3 rounded-full font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105 inline-block"
+                >
                   Contact
                 </a>
               </div>
@@ -95,12 +103,13 @@ function App() {
                   Testimonials
                 </a>
                 <a
-                  href="mailto:smartfixcs2018@gmail.com"
-                  className="block bg-gradient-to-r from-blue-600 to-orange-500 text-white px-4 py-2 rounded-full font-bold hover:shadow-2xl transition-all duration-300 text-center"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Contact
-                </a>
+                href="https://wa.me/918710031865?text=Hello%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-8 py-3 rounded-full font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105 inline-block"
+              >
+                Contact
+              </a>
               </div>
             )}
           </div>
@@ -169,7 +178,7 @@ function App() {
               <div className="text-center group hover:scale-105 transition-transform duration-300">
                 <div className="relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop"
+                    src="https://images.unsplash.com/photo-1566918621183-ff90d3e0553f?w=400&h=250&fit=crop"
                     alt="Online Help"
                     className="rounded-2xl shadow-xl mx-auto mb-6 w-full h-64 object-cover"
                   />
@@ -181,7 +190,7 @@ function App() {
               <div className="text-center group hover:scale-105 transition-transform duration-300">
                 <div className="relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1487611459768-bd414656ea10?w=400&h=250&fit=crop"
+                    src="https://plus.unsplash.com/premium_photo-1663013244412-1153aabaa1bc?w=400&h=250&fit=crop"
                     alt="Professional Repair"
                     className="rounded-2xl shadow-xl mx-auto mb-6 w-full h-64 object-cover"
                   />
@@ -197,85 +206,99 @@ function App() {
         {/* About Section */}
         <section id="about" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="space-y-8">
-                <div className="flex space-x-4">
-                  <img 
-                    src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=300&h=200&fit=crop"
-                    alt="Before"
-                    className="rounded-xl shadow-lg w-1/2"
-                  />
-                  <img 
-                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop"
-                    alt="After"
-                    className="rounded-xl shadow-lg w-1/2"
-                  />
-                </div>
+    
+          <div className="text-center mb-12">
+              <h2 className="text-4xl lg:text-5xl font-bold">
+              <span className="text-gray-900">Welcome To</span>{' '}
+              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+              Smartfix Computer Solution
+              </span>
+              </h2>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-16 items-center mb-12">
+              {/* Left box - 4 images grid */}
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1741392078186-35518e238f6b?w=300&h=200&fit=crop"
+                  alt="Before 1"
+                  className="rounded-xl shadow-lg w-full h-full object-cover"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop"
+                  alt="Before 2"
+                  className="rounded-xl shadow-lg w-full h-full object-cover"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1742416180133-cd9ab0816259?w=300&h=200&fit=crop"
+                  alt="After 1"
+                  className="rounded-xl shadow-lg w-full h-full object-cover"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=300&h=200&fit=crop"
+                  alt="After 2"
+                  className="rounded-xl shadow-lg w-full h-full object-cover"
+                />
               </div>
+
+              {/* Right box - paragraphs */}
               <div className="space-y-6">
-                <h2 className="text-4xl lg:text-5xl font-bold">
-                  <span className="text-gray-900">Welcome To</span>{' '}
-                  <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
-                    Smartfix Computer Solution
-                  </span>
-                </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Being a reputed Company, We <strong>Smartfix Computer Solution</strong> believe that everyone deserves high-quality computer hardware and IT products, no matter their budget or preferences. That's why we offer a wide range of options, from new and unused products to refurbished and restored items, both branded and assembled.
+                  Being a reputed Company, We <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent"><strong>Smartfix Computer Solution</strong></span> believe that everyone deserves high-quality computer hardware and IT products, no matter their budget or preferences. That's why we offer a wide range of options, from new and unused products to refurbished and restored items, both branded and assembled.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   Why settle for less when you can have both quality and affordability? Visit Smartfix today and discover our commitment to providing quality computer hardware and IT products at competitive prices. Our team takes pride in delivering exceptional customer service and expertise to help you find the perfect product for your needs.
                 </p>
+              </div>
+            </div>
 
-                <div className="grid md:grid-cols-2 gap-6 mt-8">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-                        <span className="text-white font-bold">💻</span>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-gray-900">IT Solutions</h4>
-                        <p className="text-sm text-gray-600">Complete hardware & software solutions</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
-                        <span className="text-white font-bold">⭐</span>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-gray-900">Major Brands</h4>
-                        <p className="text-sm text-gray-600">Dell, HP, Lenovo & Intel partnerships</p>
-                      </div>
-                    </div>
+            <div className="text-center">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 justify-center mb-8">
+                {/* Feature 1 */}
+                <div className="flex flex-col items-center space-y-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <span className="text-white font-bold">💻</span>
                   </div>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-orange-500 rounded-xl flex items-center justify-center">
-                        <span className="text-white font-bold">🏪</span>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-gray-900">All @ One Place</h4>
-                        <p className="text-sm text-gray-600">Everything for everyone</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-blue-600 rounded-xl flex items-center justify-center">
-                        <span className="text-white font-bold">📅</span>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-gray-900">7+ Years Experience</h4>
-                        <p className="text-sm text-gray-600">Trusted expertise since 2018</p>
-                      </div>
-                    </div>
-                  </div>
+                  <h4 className="font-bold text-gray-900">IT Solutions</h4>
+                  <p className="text-sm text-gray-600">Complete hardware & software solutions</p>
                 </div>
 
-                <button className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-8 py-3 rounded-full font-bold hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  Read More
-                </button>
+                {/* Feature 2 */}
+                <div className="flex flex-col items-center space-y-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
+                    <span className="text-white font-bold">⭐</span>
+                  </div>
+                  <h4 className="font-bold text-gray-900">Major Brands</h4>
+                  <p className="text-sm text-gray-600">Dell, HP, Lenovo & Intel partnerships</p>
+                </div>
+
+                {/* Feature 3 */}
+                <div className="flex flex-col items-center space-y-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-orange-500 rounded-xl flex items-center justify-center">
+                    <span className="text-white font-bold">🏪</span>
+                  </div>
+                  <h4 className="font-bold text-gray-900">All @ One Place</h4>
+                  <p className="text-sm text-gray-600">Everything for everyone</p>
+                </div>
+
+                {/* Feature 4 */}
+                <div className="flex flex-col items-center space-y-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <span className="text-white font-bold">📅</span>
+                  </div>
+                  <h4 className="font-bold text-gray-900">7+ Years Experience</h4>
+                  <p className="text-sm text-gray-600">Trusted expertise since 2018</p>
+                </div>
               </div>
+
+              {/* Button */}
+              <button className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-8 py-3 rounded-full font-bold hover:shadow-xl transition-all duration-300 hover:scale-105">
+                Read More
+              </button>
             </div>
           </div>
         </section>
+
 
         {/* Mission Section */}
         <section className="py-20 bg-gradient-to-br from-blue-50 to-orange-50">
@@ -326,7 +349,7 @@ function App() {
                 <div className="text-lg font-semibold">Years of Experience</div>
               </div>
               <div className="space-y-2">
-                <div className="text-5xl font-bold counter" data-target="200">200+</div>
+                <div className="text-5xl font-bold counter" data-target="200">1000+</div>
                 <div className="text-lg font-semibold">Happy Clients</div>
               </div>
             </div>
@@ -334,225 +357,9 @@ function App() {
         </section>
 
         {/* Our Products Section */}
-        <section id="products" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Our Products</span>
-              </h2>
-            </div>
+        <ProductsSection />
 
-            {/* Product Categories Tabs */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <button className="tab-button active px-6 py-3 rounded-full font-semibold transition-all duration-300" data-category="all">All</button>
-              <button className="tab-button px-6 py-3 rounded-full font-semibold transition-all duration-300" data-category="computers">Desktops & Laptops</button>
-              <button className="tab-button px-6 py-3 rounded-full font-semibold transition-all duration-300" data-category="accessories">Accessories</button>
-              <button className="tab-button px-6 py-3 rounded-full font-semibold transition-all duration-300" data-category="software">Software Products</button>
-            </div>
-
-            {/* Products Grid */}
-            <div className="product-grid">
-              {/* Desktop Products */}
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="computers">
-                <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400&h=300&fit=crop" alt="Desktop PC" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Dell Desktop Computers</h3>
-                  <p className="text-gray-600 mb-4">High-performance Dell desktop systems for office and personal use</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Dell Desktop Inquiry&body=Hello, I am interested in Dell desktop computers." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="computers">
-                <img src="https://images.unsplash.com/photo-1572460267355-bacc597762a5?w=400&h=300&fit=crop" alt="HP Desktop" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">HP Desktop Systems</h3>
-                  <p className="text-gray-600 mb-4">Reliable HP desktop computers for business and home use</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=HP Desktop Inquiry&body=Hello, I am interested in HP desktop computers." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="computers">
-                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&h=300&fit=crop" alt="Lenovo Desktop" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Lenovo Desktop PCs</h3>
-                  <p className="text-gray-600 mb-4">Powerful Lenovo desktop solutions for professional work</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Lenovo Desktop Inquiry&body=Hello, I am interested in Lenovo desktop computers." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              {/* Laptop Products */}
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="computers">
-                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop" alt="Dell Laptop" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Dell Laptops</h3>
-                  <p className="text-gray-600 mb-4">Premium Dell laptops for business and personal use</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Dell Laptop Inquiry&body=Hello, I am interested in Dell laptops." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="computers">
-                <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=400&h=300&fit=crop" alt="HP Laptop" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">HP Laptops</h3>
-                  <p className="text-gray-600 mb-4">Reliable HP laptop models for all your computing needs</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=HP Laptop Inquiry&body=Hello, I am interested in HP laptops." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="computers">
-                <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&h=300&fit=crop" alt="Gaming Laptop" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Gaming Laptops</h3>
-                  <p className="text-gray-600 mb-4">High-performance gaming laptops for enthusiasts</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Gaming Laptop Inquiry&body=Hello, I am interested in gaming laptops." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="computers">
-                <img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=400&h=300&fit=crop" alt="Lenovo Laptop" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Lenovo ThinkPad</h3>
-                  <p className="text-gray-600 mb-4">Professional Lenovo ThinkPad series for business</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Lenovo Laptop Inquiry&body=Hello, I am interested in Lenovo laptops." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="computers">
-                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=300&fit=crop" alt="Ultrabook" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Ultrabook Laptops</h3>
-                  <p className="text-gray-600 mb-4">Slim and lightweight ultrabook laptops for mobility</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Ultrabook Inquiry&body=Hello, I am interested in ultrabook laptops." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="computers">
-                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&h=300&fit=crop" alt="Workstation" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Workstation PCs</h3>
-                  <p className="text-gray-600 mb-4">High-end workstation computers for professional work</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Workstation Inquiry&body=Hello, I am interested in workstation computers." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              {/* Keyboard & Mouse */}
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessories">
-                <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=300&fit=crop" alt="Keyboard Mouse" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Keyboard & Mouse</h3>
-                  <p className="text-gray-600 mb-4">Wireless and wired keyboards, mice, and combo sets</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Accessories Inquiry&body=Hello, I am interested in computer accessories." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              {/* Monitor */}
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessories">
-                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=300&fit=crop" alt="Monitor" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">LED/LCD Monitors</h3>
-                  <p className="text-gray-600 mb-4">High-quality monitors in various sizes for work and gaming</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Monitor Inquiry&body=Hello, I am interested in monitors." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              {/* Speakers */}
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessories">
-                <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=400&h=300&fit=crop" alt="Computer Speakers" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Computer Speakers</h3>
-                  <p className="text-gray-600 mb-4">High-quality audio systems and computer speakers</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Speaker Inquiry&body=Hello, I am interested in computer speakers." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              {/* Printer */}
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessories">
-                <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop" alt="Printer" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Printers & Scanners</h3>
-                  <p className="text-gray-600 mb-4">Inkjet, laser printers and scanning solutions</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Printer Inquiry&body=Hello, I am interested in printers." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              {/* Webcam */}
-              {/* <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="accessories">
-                <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=400&h=300&fit=crop" alt="Webcam" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Webcams & Headsets</h3>
-                  <p className="text-gray-600 mb-4">HD webcams and professional headsets for video calls</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Webcam Inquiry&body=Hello, I am interested in webcams and headsets." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div> */}
-
-              {/* Windows OS */}
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="software">
-                <img src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?w=400&h=300&fit=crop" alt="Windows OS" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Windows Operating System</h3>
-                  <p className="text-gray-600 mb-4">Genuine Windows OS licenses and installations</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Windows OS Inquiry&body=Hello, I need Windows OS installation." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              {/* Antivirus */}
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="software">
-                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=300&fit=crop" alt="Antivirus Software" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Antivirus Software</h3>
-                  <p className="text-gray-600 mb-4">Premium antivirus solutions for complete protection</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=Antivirus Inquiry&body=Hello, I need antivirus software." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-
-              {/* Office Software */}
-              <div className="product-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="software">
-                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" alt="Office Software" className="w-full h-48 object-cover"/>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Microsoft Office</h3>
-                  <p className="text-gray-600 mb-4">Complete office suite for productivity and business</p>
-                  <a href="mailto:smartfixcs2018@gmail.com?subject=MS Office Inquiry&body=Hello, I need Microsoft Office." className="bg-gradient-to-r from-blue-600 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
+        {/* Services Section */}        
         <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -657,7 +464,7 @@ function App() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-8 rounded-2xl shadow-lg">
                 <div className="flex items-center mb-6">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
+                  <img src="https://images.unsplash.com/photo-1552642986-ccb41e7059e7?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
                   <div>
                     <h4 className="font-bold text-gray-900">Ramanath Rao</h4>
                     <div className="text-yellow-400">⭐⭐⭐⭐⭐</div>
@@ -668,7 +475,7 @@ function App() {
 
               <div className="bg-gradient-to-br from-orange-50 to-blue-50 p-8 rounded-2xl shadow-lg">
                 <div className="flex items-center mb-6">
-                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
+                  <img src="https://images.unsplash.com/photo-1598096969068-7f52cac10c83?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
                   <div>
                     <h4 className="font-bold text-gray-900">Abdul Aziz</h4>
                     <div className="text-yellow-400">⭐⭐⭐⭐⭐</div>
@@ -679,7 +486,7 @@ function App() {
 
               <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-8 rounded-2xl shadow-lg">
                 <div className="flex items-center mb-6">
-                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
+                  <img src="https://plus.unsplash.com/premium_photo-1682089841647-458dd29dc0ee?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
                   <div>
                     <h4 className="font-bold text-gray-900">Shiny M.</h4>
                     <div className="text-yellow-400">⭐⭐⭐⭐⭐</div>
@@ -690,7 +497,7 @@ function App() {
 
               <div className="bg-gradient-to-br from-orange-50 to-blue-50 p-8 rounded-2xl shadow-lg">
                 <div className="flex items-center mb-6">
-                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
+                  <img src="https://images.unsplash.com/photo-1559100296-d3719e7e0433?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
                   <div>
                     <h4 className="font-bold text-gray-900">Jagadish K.</h4>
                     <div className="text-yellow-400">⭐⭐⭐⭐⭐</div>
@@ -701,7 +508,7 @@ function App() {
 
               <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-8 rounded-2xl shadow-lg">
                 <div className="flex items-center mb-6">
-                  <img src="https://images.unsplash.com/photo-1494790108755-2616c27de5e0?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
+                  <img src="https://images.unsplash.com/photo-1509839862600-309617c3201e?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
                   <div>
                     <h4 className="font-bold text-gray-900">Priya Sharma</h4>
                     <div className="text-yellow-400">⭐⭐⭐⭐⭐</div>
@@ -712,7 +519,7 @@ function App() {
 
               <div className="bg-gradient-to-br from-orange-50 to-blue-50 p-8 rounded-2xl shadow-lg">
                 <div className="flex items-center mb-6">
-                  <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
+                  <img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?w=60&h=60&fit=crop&crop=face" alt="Client" className="w-16 h-16 rounded-full mr-4"/>
                   <div>
                     <h4 className="font-bold text-gray-900">Amit Patel</h4>
                     <div className="text-yellow-400">⭐⭐⭐⭐⭐</div>
@@ -729,12 +536,12 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="overflow-hidden">
               <div className="flex space-x-12 client-logos">
-                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300"/>
-                <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300"/>
-                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300"/>
-                <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300"/>
-                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300"/>
-                <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300"/>
+                <img src="https://images.unsplash.com/photo-1706879349377-bda8643cae8b?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto hover:grayscale-0 transition-all duration-300"/>
+                <img src="https://images.unsplash.com/photo-1562705121-e624542c7b9b?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto hover:grayscale-0 transition-all duration-300"/>
+                <img src="https://images.unsplash.com/photo-1646627928017-969b372e2727?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto hover:grayscale-0 transition-all duration-300"/>
+                <img src="https://images.unsplash.com/photo-1714251033127-9401d0adaaac?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto hover:grayscale-0 transition-all duration-300"/>
+                <img src="https://images.unsplash.com/photo-1606963060045-1e3eaa0e6eac?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto hover:grayscale-0 transition-all duration-300"/>
+                <img src="https://images.unsplash.com/photo-1663124178667-28b3776d7c15?w=120&h=60&fit=crop" alt="Client Logo" className="h-16 w-auto hover:grayscale-0 transition-all duration-300"/>
               </div>
             </div>
           </div>
@@ -742,108 +549,62 @@ function App() {
 
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 to-orange-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">Get In Touch</span>
-              </h2>
-              <p className="text-xl text-gray-600">Ready to transform your IT infrastructure? Contact us today!</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                Get In Touch
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600">
+              Ready to transform your IT infrastructure? Contact us today!
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Office Address */}
+            <div className="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-start hover:shadow-2xl transition duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-xl mb-4">
+                📍
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2">Office Address</h4>
+              <p className="text-gray-600">
+                No 34, 2nd Floor, 6th Cross, 2nd Main,<br /> JP Nagar, 7th Phase, Bengaluru,<br />
+                Karnataka - 560078
+              </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-16">
-              <div className="space-y-8">
-              <div className="bg-white p-8 rounded-2xl shadow-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-                
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-                      <span className="text-white">📍</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Office Address</h4>
-                      <p className="text-gray-600">No 157, 1st Main, 7th Block, Koramangala<br/>Bangalore, Karnataka – 560095</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
-                      <span className="text-white">📞</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Phone</h4>
-                      <p className="text-gray-600">+91-8710031865</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-orange-500 rounded-xl flex items-center justify-center">
-                      <span className="text-white">✉️</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Email</h4>
-                      <p className="text-gray-600">abinash5dash@gmail.com</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-blue-600 rounded-xl flex items-center justify-center">
-                      <span className="text-white">🕒</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">Business Hours</h4>
-                      <p className="text-gray-600">Mon-Sat: 10:00 AM - 7:00 PM<br/>Sunday: Closed</p>
-                    </div>
-                  </div>
-                </div>
+            {/* Phone */}
+            <div className="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-start hover:shadow-2xl transition duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center text-white text-xl mb-4">
+                📞
               </div>
-              </div>
+              <h4 className="font-bold text-gray-900 mb-2">Phone</h4>
+              <p className="text-gray-600">+91-8710031865</p>
+            </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get a Quote</h3>
-                
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-gray-700 font-semibold mb-2">Full Name</label>
-                      <input type="text" className="form-input w-full px-4 py-3 rounded-lg" placeholder="Your Name" required/>
-                    </div>
-                    <div>
-                      <label className="block text-gray-700 font-semibold mb-2">Email</label>
-                      <input type="email" className="form-input w-full px-4 py-3 rounded-lg" placeholder="your@email.com" required/>
-                    </div>
-                  </div>
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-gray-700 font-semibold mb-2">Phone</label>
-                      <input type="tel" className="form-input w-full px-4 py-3 rounded-lg" placeholder="+91 XXXXX XXXXX"/>
-                    </div>
-                    <div>
-                      <label className="block text-gray-700 font-semibold mb-2">Service Type</label>
-                      <select className="form-input w-full px-4 py-3 rounded-lg">
-                        <option>Select Service</option>
-                        <option>Hardware Repair</option>
-                        <option>New Computer Purchase</option>
-                        <option>Software Installation</option>
-                        <option>Accessories</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-gray-700 font-semibold mb-2">Message</label>
-                    <textarea rows="4" className="form-input w-full px-4 py-3 rounded-lg" placeholder="Describe your requirements..." required></textarea>
-                  </div>
-                  
-                  <button type="submit" className="btn-primary w-full px-8 py-4 rounded-lg text-lg font-bold">
-                    Get Quote
-                  </button>
-                </form>
+            {/* Email */}
+            <div className="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-start hover:shadow-2xl transition duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-orange-500 rounded-xl flex items-center justify-center text-white text-xl mb-4">
+                ✉️
               </div>
+              <h4 className="font-bold text-gray-900 mb-2">Email</h4>
+              <p className="text-gray-600">smartfixcs2018@gmail.com</p>
+            </div>
+
+            {/* Business Hours */}
+            <div className="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-start hover:shadow-2xl transition duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-xl mb-4">
+                🕒
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2">Business Hours</h4>
+              <p className="text-gray-600">
+                Mon-Sat: 10:00 AM - 7:00 PM<br />
+                Sunday: Closed
+              </p>
             </div>
           </div>
+        </div>
         </section>
 
         {/* Footer */}
