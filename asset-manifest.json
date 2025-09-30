@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/smart-fix/static/css/main.fd73d663.css",
-    "main.js": "/smart-fix/static/js/main.adb633a7.js",
+    "main.css": "/smart-fix/static/css/main.74e4e56d.css",
+    "main.js": "/smart-fix/static/js/main.d46aa0ae.js",
     "index.html": "/smart-fix/index.html",
-    "main.fd73d663.css.map": "/smart-fix/static/css/main.fd73d663.css.map",
-    "main.adb633a7.js.map": "/smart-fix/static/js/main.adb633a7.js.map"
+    "main.74e4e56d.css.map": "/smart-fix/static/css/main.74e4e56d.css.map",
+    "main.d46aa0ae.js.map": "/smart-fix/static/js/main.d46aa0ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd73d663.css",
-    "static/js/main.adb633a7.js"
+    "static/css/main.74e4e56d.css",
+    "static/js/main.d46aa0ae.js"
   ]
 }
